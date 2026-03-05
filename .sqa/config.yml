@@ -1,0 +1,78 @@
+config:
+  credentials: []
+  project_repos:
+    github.com/EOSC-synergy/sqaaas-tooling:
+      branch: feature/pynblint
+      repo: https://github.com/EOSC-synergy/sqaaas-tooling
+    github.com/grycap/adim:
+      branch: v0.5.0
+      repo: https://github.com/grycap/adim
+environment:
+  JPL_DOCKERFORCEBUILD: enabled
+  JPL_KEEPGOING: enabled
+sqa_criteria:
+  QC.Acc:
+    repos:
+      github.com/grycap/adim git:
+        commands:
+        - /usr/bin/env sh .sqa/script.homey-burgundy-panda.sh
+        container: qc.acc_woozy-tangerine-warthog
+  QC.Doc:
+    repos:
+      github.com/grycap/adim find_doc_files.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.tacky-cerulean-ocelot.sh
+        container: qc.doc_whiny-red-bonobo
+      github.com/grycap/adim git:
+        commands:
+        - /usr/bin/env sh .sqa/script.hasty-tan-argentino.sh
+        container: qc.doc_hasty-russet-setter
+      github.com/grycap/adim markdownlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.nerdy-orange-bombay.sh
+        container: qc.doc_greasy-saffron-meerkat
+  QC.Lic:
+    repos:
+      github.com/grycap/adim licensee:
+        commands:
+        - /usr/bin/env sh .sqa/script.squeaky-tangerine-anteater.sh
+        container: qc.lic_lumpy-persimmon-wasp
+  QC.Met:
+    repos:
+      github.com/grycap/adim validate_codemeta:
+        commands:
+        - /usr/bin/env sh .sqa/script.cranky-plum-camel.sh
+        container: qc.met_droopy-cobalt-urchin
+  QC.Sec:
+    repos:
+      github.com/grycap/adim bandit:
+        commands:
+        - /usr/bin/env sh .sqa/script.grumpy-chartreuse-cuscus.sh
+        container: qc.sec_clammy-periwinkle-jellyfish
+  QC.Sty:
+    repos:
+      github.com/grycap/adim flake8:
+        commands:
+        - /usr/bin/env sh .sqa/script.freaky-champagne-pig.sh
+        container: qc.sty_hilly-linen-blue
+      github.com/grycap/adim hadolint:
+        commands:
+        - /usr/bin/env sh .sqa/script.shaggy-flax-wildebeest.sh
+        container: qc.sty_wheezy-cerulean-seal
+      github.com/grycap/adim jsonlint:
+        commands:
+        - /usr/bin/env sh .sqa/script.foggy-xanthic-panda.sh
+        container: qc.sty_sickly-xanthic-salamander
+  QC.Uni:
+    repos:
+      github.com/grycap/adim commands:
+        commands:
+        - /usr/bin/env sh .sqa/script.smelly-denim-alligator.sh
+        container: qc.uni_chummy-violet-quetzal
+  QC.Ver:
+    repos:
+      github.com/grycap/adim get_git_tags.py:
+        commands:
+        - /usr/bin/env sh .sqa/script.skinny-amethyst-husky.sh
+        container: qc.ver_gimpy-corn-binturong
+timeout: 5400

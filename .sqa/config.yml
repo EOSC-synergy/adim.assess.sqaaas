@@ -5,7 +5,7 @@ config:
       branch: feature/pynblint
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/grycap/adim:
-      branch: v0.5.0
+      branch: v0.5.1
       repo: https://github.com/grycap/adim
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,64 +15,64 @@ sqa_criteria:
     repos:
       github.com/grycap/adim git:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-aqua-eleuth.sh
-        container: qc.acc_droopy-ultramarine-manatee
+        - /usr/bin/env sh .sqa/script.scaly-chartreuse-zebu.sh
+        container: qc.acc_slaphappy-gamboge-falcon
   QC.Doc:
     repos:
       github.com/grycap/adim find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-green-bat.sh
-        container: qc.doc_muzzy-smalt-chow
+        - /usr/bin/env sh .sqa/script.pasty-tan-angelfish.sh
+        container: qc.doc_slaphappy-asparagus-hornet
       github.com/grycap/adim git:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-brown-bullfrog.sh
-        container: qc.doc_frumpy-firebrick-bandicoot
+        - /usr/bin/env sh .sqa/script.flaky-wisteria-cockroach.sh
+        container: qc.doc_shaky-flax-loon
       github.com/grycap/adim markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-bistre-salamander.sh
-        container: qc.doc_leaky-ecru-quail
+        - /usr/bin/env sh .sqa/script.goopy-flax-panda.sh
+        container: qc.doc_stinky-chartreuse-owl
   QC.Lic:
     repos:
       github.com/grycap/adim licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-cerise-lionfish.sh
-        container: qc.lic_tacky-aqua-hamster
+        - /usr/bin/env sh .sqa/script.woolly-firebrick-bullfrog.sh
+        container: qc.lic_blurry-black-fish
   QC.Met:
     repos:
       github.com/grycap/adim validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-lemon-capuchin.sh
-        container: qc.met_cozy-zucchini-urchin
+        - /usr/bin/env sh .sqa/script.homey-ultramarine-hyrax.sh
+        container: qc.met_breezy-sangria-collie
   QC.Sec:
     repos:
       github.com/grycap/adim bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-cinnamon-mammoth.sh
-        container: qc.sec_muzzy-cerise-robin
+        - /usr/bin/env sh .sqa/script.leaky-mustard-dog.sh
+        container: qc.sec_sickly-asparagus-chamois
   QC.Sty:
     repos:
       github.com/grycap/adim flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-asparagus-horse.sh
-        container: qc.sty_flabby-copper-collie
+        - /usr/bin/env sh .sqa/script.beady-eggplant-bee.sh
+        container: qc.sty_goopy-champagne-crab
       github.com/grycap/adim hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-maroon-urchin.sh
-        container: qc.sty_randy-mustard-gharial
+        - /usr/bin/env sh .sqa/script.sickly-black-ibis.sh
+        container: qc.sty_surly-cyan-paradise
       github.com/grycap/adim jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-flax-walrus.sh
-        container: qc.sty_stuffy-peach-paradise
+        - /usr/bin/env sh .sqa/script.pasty-crimson-fossa.sh
+        container: qc.sty_geeky-flax-cow
   QC.Uni:
     repos:
       github.com/grycap/adim commands:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-white-barracuda.sh
-        container: qc.uni_scummy-khaki-beaver
+        - /usr/bin/env sh .sqa/script.nippy-xanthic-flamingo.sh
+        container: qc.uni_zippy-vermilion-javanese
   QC.Ver:
     repos:
       github.com/grycap/adim get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-magnolia-bulldog.sh
-        container: qc.ver_lanky-silver-eagle
+        - /usr/bin/env sh .sqa/script.messy-chartreuse-uguisu.sh
+        container: qc.ver_homey-flax-swan
 timeout: 5400

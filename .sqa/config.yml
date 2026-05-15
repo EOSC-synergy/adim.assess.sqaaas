@@ -2,10 +2,10 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: feature/pynblint
+      branch: feature/pynblint_fix
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/grycap/adim:
-      branch: v0.5.0
+      branch: v0.7.1
       repo: https://github.com/grycap/adim
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,64 +15,64 @@ sqa_criteria:
     repos:
       github.com/grycap/adim git:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-aqua-eleuth.sh
-        container: qc.acc_droopy-ultramarine-manatee
+        - /usr/bin/env sh .sqa/script.aquamarine_dreamy_reindeer.sh
+        container: qc.acc_tundra_eager_octopus
   QC.Doc:
     repos:
       github.com/grycap/adim find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-green-bat.sh
-        container: qc.doc_muzzy-smalt-chow
+        - /usr/bin/env sh .sqa/script.rosewater_zealous_unicorn.sh
+        container: qc.doc_powder_focused_cobra
       github.com/grycap/adim git:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-brown-bullfrog.sh
-        container: qc.doc_frumpy-firebrick-bandicoot
+        - /usr/bin/env sh .sqa/script.onyx_bold_sphinx.sh
+        container: qc.doc_lapis_humorous_moose
       github.com/grycap/adim markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-bistre-salamander.sh
-        container: qc.doc_leaky-ecru-quail
+        - /usr/bin/env sh .sqa/script.cardamom_authentic_eel.sh
+        container: qc.doc_puce_balanced_lynx
   QC.Lic:
     repos:
       github.com/grycap/adim licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-cerise-lionfish.sh
-        container: qc.lic_tacky-aqua-hamster
+        - /usr/bin/env sh .sqa/script.purple_persistent_moth.sh
+        container: qc.lic_banana_patient_termite
   QC.Met:
     repos:
       github.com/grycap/adim validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-lemon-capuchin.sh
-        container: qc.met_cozy-zucchini-urchin
+        - /usr/bin/env sh .sqa/script.moss_fair_frog.sh
+        container: qc.met_pink_philosophical_giraffe
   QC.Sec:
     repos:
       github.com/grycap/adim bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-cinnamon-mammoth.sh
-        container: qc.sec_muzzy-cerise-robin
+        - /usr/bin/env sh .sqa/script.verdant_enthusiastic_sparrow.sh
+        container: qc.sec_carmine_carefree_turtle
   QC.Sty:
     repos:
       github.com/grycap/adim flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-asparagus-horse.sh
-        container: qc.sty_flabby-copper-collie
+        - /usr/bin/env sh .sqa/script.rust_cautious_dolphin.sh
+        container: qc.sty_fuchsia_logical_elephant
       github.com/grycap/adim hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-maroon-urchin.sh
-        container: qc.sty_randy-mustard-gharial
+        - /usr/bin/env sh .sqa/script.clementine_elated_lemur.sh
+        container: qc.sty_jet_grumpy_komodo
       github.com/grycap/adim jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-flax-walrus.sh
-        container: qc.sty_stuffy-peach-paradise
+        - /usr/bin/env sh .sqa/script.pistachio_sweet_armadillo.sh
+        container: qc.sty_watermelon_imaginative_seahorse
   QC.Uni:
     repos:
       github.com/grycap/adim commands:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-white-barracuda.sh
-        container: qc.uni_scummy-khaki-beaver
+        - /usr/bin/env sh .sqa/script.amaranth_hopeful_wolf.sh
+        container: qc.uni_rosewater_lively_spren
   QC.Ver:
     repos:
       github.com/grycap/adim get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-magnolia-bulldog.sh
-        container: qc.ver_lanky-silver-eagle
+        - /usr/bin/env sh .sqa/script.carmine_grateful_lionfish.sh
+        container: qc.ver_fuchsia_lively_eagle
 timeout: 5400

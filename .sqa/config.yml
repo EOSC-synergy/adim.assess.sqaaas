@@ -2,10 +2,10 @@ config:
   credentials: []
   project_repos:
     github.com/EOSC-synergy/sqaaas-tooling:
-      branch: feature/pynblint
+      branch: fix/updatego
       repo: https://github.com/EOSC-synergy/sqaaas-tooling
     github.com/grycap/adim:
-      branch: v0.5.0
+      branch: main
       repo: https://github.com/grycap/adim
 environment:
   JPL_DOCKERFORCEBUILD: enabled
@@ -15,64 +15,64 @@ sqa_criteria:
     repos:
       github.com/grycap/adim git:
         commands:
-        - /usr/bin/env sh .sqa/script.crappy-aqua-eleuth.sh
-        container: qc.acc_droopy-ultramarine-manatee
+        - /usr/bin/env sh .sqa/script.lime_compassionate_stingray.sh
+        container: qc.acc_incarnadine_decisive_panda
   QC.Doc:
     repos:
       github.com/grycap/adim find_doc_files.py:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-green-bat.sh
-        container: qc.doc_muzzy-smalt-chow
+        - /usr/bin/env sh .sqa/script.ochre_sad_gazelle.sh
+        container: qc.doc_avocado_articulate_chameleon
       github.com/grycap/adim git:
         commands:
-        - /usr/bin/env sh .sqa/script.squeaky-brown-bullfrog.sh
-        container: qc.doc_frumpy-firebrick-bandicoot
+        - /usr/bin/env sh .sqa/script.olive_driven_bat.sh
+        container: qc.doc_verdant_unique_chipmunk
       github.com/grycap/adim markdownlint:
         commands:
-        - /usr/bin/env sh .sqa/script.muzzy-bistre-salamander.sh
-        container: qc.doc_leaky-ecru-quail
+        - /usr/bin/env sh .sqa/script.boysenberry_reliable_puffin.sh
+        container: qc.doc_iris_sad_angelfish
   QC.Lic:
     repos:
       github.com/grycap/adim licensee:
         commands:
-        - /usr/bin/env sh .sqa/script.scanty-cerise-lionfish.sh
-        container: qc.lic_tacky-aqua-hamster
+        - /usr/bin/env sh .sqa/script.periwinkle_confident_spider.sh
+        container: qc.lic_slate_industrious_porcupine
   QC.Met:
     repos:
       github.com/grycap/adim validate_codemeta:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-lemon-capuchin.sh
-        container: qc.met_cozy-zucchini-urchin
+        - /usr/bin/env sh .sqa/script.verdant_cranky_eel.sh
+        container: qc.met_coral_focused_donkey
   QC.Sec:
     repos:
       github.com/grycap/adim bandit:
         commands:
-        - /usr/bin/env sh .sqa/script.seedy-cinnamon-mammoth.sh
-        container: qc.sec_muzzy-cerise-robin
+        - /usr/bin/env sh .sqa/script.steel_curious_wildcat.sh
+        container: qc.sec_mint_goofy_porpoise
   QC.Sty:
     repos:
       github.com/grycap/adim flake8:
         commands:
-        - /usr/bin/env sh .sqa/script.thirsty-asparagus-horse.sh
-        container: qc.sty_flabby-copper-collie
+        - /usr/bin/env sh .sqa/script.crimson_melancholy_owl.sh
+        container: qc.sty_slate_resilient_porpoise
       github.com/grycap/adim hadolint:
         commands:
-        - /usr/bin/env sh .sqa/script.hasty-maroon-urchin.sh
-        container: qc.sty_randy-mustard-gharial
+        - /usr/bin/env sh .sqa/script.onyx_carefree_sloth.sh
+        container: qc.sty_red_impulsive_dugong
       github.com/grycap/adim jsonlint:
         commands:
-        - /usr/bin/env sh .sqa/script.lanky-flax-walrus.sh
-        container: qc.sty_stuffy-peach-paradise
+        - /usr/bin/env sh .sqa/script.turmeric_eccentric_dolphin.sh
+        container: qc.sty_lilac_upbeat_donkey
   QC.Uni:
     repos:
-      github.com/grycap/adim commands:
+      github.com/grycap/adim pytest:
         commands:
-        - /usr/bin/env sh .sqa/script.hazy-white-barracuda.sh
-        container: qc.uni_scummy-khaki-beaver
+        - /usr/bin/env sh .sqa/script.jet_sympathetic_chipmunk.sh
+        container: qc.uni_pansy_industrious_meerkat
   QC.Ver:
     repos:
       github.com/grycap/adim get_git_tags.py:
         commands:
-        - /usr/bin/env sh .sqa/script.snappy-magnolia-bulldog.sh
-        container: qc.ver_lanky-silver-eagle
+        - /usr/bin/env sh .sqa/script.royal_kind_hippopotamus.sh
+        container: qc.ver_forest_authentic_grasshopper
 timeout: 5400
